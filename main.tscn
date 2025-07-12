@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://5n61t5n3e4jr"]
+
+[ext_resource type="Texture2D" uid="uid://mnvwdb1xsmn1" path="res://BackgroundUI/Play Mat Project H.jpeg" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bvjub4bdhrlf5" path="res://card_manager.gd" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://pu3srksvc3qf" path="res://card.tscn" id="2_h2yge"]
+
+[node name="Main" type="Node2D"]
+scale = Vector2(0.09, 0.09)
+
+[node name="PlayMat" type="Sprite2D" parent="."]
+position = Vector2(6366.67, 3633.33)
+scale = Vector2(23, 23)
+texture = ExtResource("1_0xm2m")
+
+[node name="CardManager" type="Node2D" parent="."]
+script = ExtResource("2_1bvp3")
+
+[node name="Card" parent="CardManager" instance=ExtResource("2_h2yge")]
+position = Vector2(1866.67, -155.556)
+
+[node name="Card2" parent="CardManager" instance=ExtResource("2_h2yge")]
+position = Vector2(5955.56, 1711.11)

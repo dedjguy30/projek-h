@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://pu3srksvc3qf"]
+
+[ext_resource type="Texture2D" uid="uid://bt3j38o8au2yh" path="res://CardSprite/StelleP.jpg" id="1_kikvd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjlel"]
+size = Vector2(1022.22, 1422.22)
+
+[node name="Card" type="Node2D"]
+
+[node name="StelleP" type="Sprite2D" parent="."]
+position = Vector2(-613, 308)
+texture = ExtResource("1_kikvd")
+centered = false
+offset = Vector2(0, 5)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-100, 1022.22)
+shape = SubResource("RectangleShape2D_rjlel")
